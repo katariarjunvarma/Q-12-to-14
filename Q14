@@ -1,0 +1,35 @@
+public class SwapNumbers {
+    public static void main(String[] args) {
+        int a = 5, b = 10;
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        System.out.println("a = " + a + ", b = " + b);
+    }
+    
+    public static boolean isPalindrome(String str) {
+        int left = 0, right = str.length() - 1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+    
+    public static void fizzBuzz(int n) {
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println("FizzBuzz");
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            } else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            } else {
+                System.out.println(i);
+            }
+        }
+    }
+}
